@@ -1,0 +1,13 @@
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Conda / virtual environment folders
+.conda/
+.env
+
+# OS files
+.DS_Store
