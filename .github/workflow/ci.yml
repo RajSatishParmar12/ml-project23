@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: ML CI Pipeline
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  train-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +22,8 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run tests
-      run: python -m unittest
+    - name: Train model
+      run: python train.py
+
+    - name: Test model
+      run: python test.py
